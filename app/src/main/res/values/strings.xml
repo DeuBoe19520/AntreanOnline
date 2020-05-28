@@ -1,0 +1,212 @@
+<resources>
+  <string name="app_name">Antrean Online</string>
+  <string name="antrean_online">Antrean Online</string>
+  <string name="kantor_pertanahan_kota_yogyakarta">Kantor Pertanahan Kota Yogyakarta</string>
+  <string name="selamat_datang">Selamat Datang</string>
+  <string name="item_0_0">Pemecahan Bidang</string>
+  <string name="item_0_1">Penggabungan Bidang</string>
+  <string name="item_0_2">Pemisahan Bidang</string>
+
+  <!--  Expandable list asset-->
+  <string name="pelayanan_pemeliharaan_data_pendaftaran_tanah">Pelayanan Pemeliharaan Data Pendaftaran Tanah</string>
+  <string-array name="pelayanan_pemeliharaan_data_pendaftaran_tanah">
+    <item>Pemecahan Bidang</item>
+    <item>Penggabungan Bidang</item>
+    <item>Pemisahan Bidang</item>
+  </string-array>
+
+  <string name="pelayanan_peralihan_hak">Pelayanan Peralihan Hak</string>
+  <string-array name="pelayanan_peralihan_hak">
+    <item>Jual Beli</item>
+    <item>Hibah</item>
+    <item>Pewarisan</item>
+    <item>Tukar Menukar</item>
+    <item>Pemasukan Dalam Perusahaan</item>
+    <item>Pembagian Hak Bersama</item>
+    <item>Lelang</item>
+  </string-array>
+
+  <string name="pelayanan_pendaftaran_tanah_pertama_kali">Pelayanan Pendaftaran Tanah Pertama Kali</string>
+  <string-array name="pelayanan_pendaftaran_tanah_pertama_kali">
+    <item>Konversi, Pengakuan dan Penegasan</item>
+    <item>Konversi, Pengakuan dan Penegasan Wakaf</item>
+  </string-array>
+
+  <string name="pelayanan_informasi_pertanahan">Pelayanan Informasi Pertanahan</string>
+  <string-array name="pelayanan_informasi_pertanahan">
+    <item>Blokir</item>
+    <item>Pengecekan</item>
+    <item>Sita</item>
+    <item>Pengangkatan Sita</item>
+    <item>Surat Keterangan Pendaftaran Tanah</item>
+  </string-array>
+
+  <string name="pelayanan_hak_tanggungan">Pelayanan Hak Tanggungan</string>
+  <string-array name="pelayanan_hak_tanggungan">
+    <item>Pendaftaran Hak Tanggungan</item>
+    <item>Roya</item>
+    <item>Peralihan Hak Tanggungan</item>
+    <item>Perubahan Kreditur</item>
+  </string-array>
+
+  <string name="pelayanan_sertipikat_pengganti">Pelayanan Sertipikat Pengganti</string>
+  <string-array name="pelayanan_sertipikat_pengganti">
+    <item>Pengganti Sertipikat Hilang</item>
+    <item>Pengganti Sertipikat Lama</item>
+    <item>Pengganti Sertipikat Rusak</item>
+  </string-array>
+
+  <string name="pelayanan_hak_milik_satuan_rumah_susun">Pelayanan Hak Milik Satuan Rumah Susun</string>
+  <string-array name="pelayanan_hak_milik_satuan_rumah_susun">
+    <item>Pendaftaran HMSRS</item>
+    <item>Perpanjangan HMSRS</item>
+  </string-array>
+
+  <string name="pelayanan_perubahan_hak">Pelayanan Perubahan Hak</string>
+  <string-array name="pelayanan_perubahan_hak">
+    <item>Perubahan Hak Wakaf</item>
+    <item>Perubahan Hak Rumah Tinggal</item>
+  </string-array>
+
+  <string name="pelayanan_pengukuran">Pelayanan Pengukuran</string>
+  <string-array name="pelayanan_pengukuran">
+    <item>Pengambilan Batas</item>
+    <item>Mengetahui Luas</item>
+  </string-array>
+
+  <string name="pelayanan_pemberian_hak_atas_tanah">Pelayanan Pemberian Hak Atas Tanah</string>
+  <string-array name="pelayanan_pemberian_hak_atas_tanah">
+    <item>Pemberian Hak Milik Perorangan</item>
+    <item>Pemberian Hak Milik Badan Hukum</item>
+    <item>Pemberian Hak Guna Usaha Perorangan</item>
+    <item>Pemberian Hak Guna Usaha Badan Hukum</item>
+    <item>Pemberian Hak Guna Bangunan Perorangan</item>
+    <item>Pemberian Hak Guna Bangunan Badan Hukum</item>
+    <item>Pemberian Hak Pakai Perorangan WNI</item>
+    <item>Pemberian Hak Pakai Perorangan WNA</item>
+    <item>Pemberian Hak Pakai Badan Hukum Indonesia</item>
+    <item>Pemberian Hak Pakai Badan Hukum Asing</item>
+    <item>Pemberian Hak Pakai Instansi Pemerintah</item>
+    <item>Pemberian Hak Pakai Pemerintah Asing</item>
+    <item>Pemberian Hak Pengelolaan Instansi Pemerintah, BUMN dan BUMD</item>
+    <item>Pemberian Hak Wakaf</item>
+    <item>P3MB atau PRK5</item>
+  </string-array>
+
+  <string name="pelayanan_perpanjangan_hak_atas_tanah">Pelayanan Perpanjangan Hak Atas Tanah</string>
+  <string-array name="pelayanan_perpanjangan_hak_atas_tanah">
+    <item>Perpanjangan Hak Guna Usaha</item>
+    <item>Perpanjangan Hak Guna Bangunan atau Hak Pakai</item>
+  </string-array>
+
+  <string name="pelayanan_pembaruan_hak">Pelayanan Pembaruan Hak</string>
+  <string-array name="pelayanan_pembaruan_hak">
+    <item>Pembaruan Hak Guna Usaha Perorangan</item>
+    <item>Pembaruan Hak Guna Usaha Badan Hukum</item>
+    <item>Pembaruan Hak Guna Bangunan Perorangan</item>
+    <item>Pembaruan Hak Guna Bangunan Badan Hukum</item>
+    <item>Pembaruan Hak Pakai Perorangan WNI</item>
+    <item>Pembaruan Hak Pakai Perorangan WNA</item>
+    <item>Pembaruan Hak Pakai Badan Hukum Indonesia</item>
+    <item>Pembaruan Hak Pakai Badan Hukum Asing</item>
+    <item>Pembaruan Hak Pakai Instansi Pemerintah</item>
+    <item>Pembaruan Hak Pakai Pemerintah Asing</item>
+  </string-array>
+
+  <string name="pelayanan_pertimbangan_teknis_pertanahan">Pelayanan Pertimbangan Teknis Pertanahan</string>
+  <string name="sila_klik_tombol_di_bawah">Sila klik tombol di bawah!</string>
+  <string name="kunjungi_situs">Kunjungi Situs</string>
+  <string-array name="pelayanan_pertimbangan_teknis_pertanahan">
+    <item>Pertimbangan Teknis Pertanahan Dalam Rangka Izin Lokasi</item>
+    <item>Pertimbangan Teknis Pertanahan Dalam Rangka Izin Perubahan Pembangunan Tanah</item>
+  </string-array>
+
+  <!--  URL-->
+  <string name="url_pemecahan_bidang">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pemecahan_Bidang/controller/Item/action/Detail</string>
+  <string name="url_penggabungan_bidang">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Penggabungan_Bidang/controller/Item/action/Detail</string>
+  <string name="url_pemisahan_bidang">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pemisahan_Bidang/controller/Item/action/Detail</string>
+  <string name="url_jual_beli">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Jual_Beli/controller/Item/action/Detail</string>
+  <string name="url_hibah">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Hibah/controller/Item/action/Detail</string>
+  <string name="url_pewarisan">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pewarisan/controller/Item/action/Detail</string>
+  <string name="url_tukar_menukar">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Tukar_Menukar/controller/Item/action/Detail</string>
+  <string name="url_pemasukan_dalam_perusahaan">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pemasukan_Dalam_Perusahaan/controller/Item/action/Detail</string>
+  <string name="url_pembagian_hak_bersama">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pembagian_Hak_Bersama/controller/Item/action/Detail</string>
+  <string name="url_lelang">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Lelang/controller/Item/action/Detail</string>
+  <string name="url_konversi_pengakuan_dan_penegasan">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/controller/Item/action/Detail?itemName=Konversi,_Pengakuan_dan_Penegasan</string>
+  <string name="url_konversi_pengakuan_dan_penegasan_wakaf">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/controller/Item/action/Detail?itemName=Konversi,_Pengakuan_dan_Penegasan_Wakaf</string>
+  <string name="url_blokir">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Blokir/controller/Item/action/Detail</string>
+  <string name="url_pengecekan">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pengecekan/controller/Item/action/Detail</string>
+  <string name="url_sita">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Sita/controller/Item/action/Detail</string>
+  <string name="url_pengangkatan_sita">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pengangkatan_Sita/controller/Item/action/Detail</string>
+  <string name="url_surat_keterangan_pendaftaran_tanah">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Surat_Keterangan_Pendaftaran_Tanah/controller/Item/action/Detail</string>
+  <string name="url_pendaftaran_hak_tanggungan">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pendaftaran_Hak_Tanggungan/controller/Item/action/Detail</string>
+  <string name="url_roya">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Roya/controller/Item/action/Detail</string>
+  <string name="url_peralihan_hak_tanggungan">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Peralihan_Hak_Tanggungan/controller/Item/action/Detail</string>
+  <string name="url_perubahan_kreditur">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Perubahan_Kreditur/controller/Item/action/Detail</string>
+  <string name="url_pengganti_sertipikat_hilang">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pengganti_Sertipikat_Hilang/controller/Item/action/Detail</string>
+  <string name="url_pengganti_sertipikat_lama">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pengganti_Sertipikat_Lama/controller/Item/action/Detail</string>
+  <string name="url_pengganti_sertipikat_rusak">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pengganti_Sertipikat_Rusak/controller/Item/action/Detail</string>
+  <string name="url_pendaftaran_hmsrs">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pendaftaran_HMSRS/controller/Item/action/Detail</string>
+  <string name="url_perpanjangan_hmsrs">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Perpanjangan_HMSRS/controller/Item/action/Detail</string>
+  <string name="url_perubahan_hak_wakaf">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Perubahan_Hak_Wakaf/controller/Item/action/Detail</string>
+  <string name="url_perubahan_hak_rumah_tinggal">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Perubahan_Hak_Rumah_Tinggal/controller/Item/action/Detail</string>
+  <string name="url_pengembalian_batas">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pengembalian_Batas/controller/Item/action/Detail</string>
+  <string name="url_mengetahui_luas">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Mengetahui_Luas/controller/Item/action/Detail</string>
+  <string name="url_pemberian_hak_milik_perorangan">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pemberian_Hak_Milik_Perorangan/controller/Item/action/Detail</string>
+  <string name="url_pemberian_hak_milik_badan_hukum">https://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pemberian_Hak_Milik_Badan_Hukum/controller/Item/action/Detail</string>
+  <string name="url_pemberian_hak_guna_usaha_perorangan">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pemberian_Hak_Guna_Usaha_Perorangan/controller/Item/action/Detail</string>
+  <string name="url_pemberian_hak_guna_usaha_badan_hukum">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pemberian_Hak_Guna_Usaha_Badan_Hukum/controller/Item/action/Detail</string>
+  <string name="url_pemberian_hak_guna_bangunan_perorangan">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pemberian_Hak_Guna_Bangunan_Perorangan/controller/Item/action/Detail</string>
+  <string name="url_pemberian_hak_guna_bangunan_badan_hukum">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pemberian_Hak_Guna_Bangunan_Badan_Hukum/controller/Item/action/Detail</string>
+  <string name="url_pemberian_hak_pakai_perorangan_wni">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pemberian_Hak_Pakai_Perorangan_WNI/controller/Item/action/Detail</string>
+  <string name="url_pemberian_hak_pakai_perorangan_wna">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pemberian_Hak_Pakai_Perorangan_WNA/controller/Item/action/Detail</string>
+  <string name="url_pemberian_hak_pakai_badan_hukum_indonesia">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pemberian_Hak_Pakai_Badan_Hukum_Indonesia/controller/Item/action/Detail</string>
+  <string name="url_pemberian_hak_pakai_badan_hukum_asing">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pemberian_Hak_Pakai_Badan_Hukum_Asing/controller/Item/action/Detail</string>
+  <string name="url_pemberian_hak_pakai_instansi_pemerintah">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pemberian_Hak_Pakai_Instansi_Pemerintah/controller/Item/action/Detail</string>
+  <string name="url_pemberian_hak_pakai_pemerintah_asing">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pemberian_Hak_Pakai_Pemerintah_Asing/controller/Item/action/Detail</string>
+  <string name="url_pemberian_hak_pengelolaan_instansi_pemerintah_bumn_dan_bumd">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/controller/Item/action/Detail?itemName=Pemberian_Hak_Pengelolaan_Instansi_Pemerintah,_BUMN_dan_BUMD</string>
+  <string name="url_pemberian_hak_wakaf">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pemberian_Hak_Wakaf/controller/Item/action/Detail</string>
+  <string name="url_p3mb_atau_prk5">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/P3MB_atau_Prk5/controller/Item/action/Detail</string>
+  <string name="url_perpanjangan_hak_guna_usaha">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Perpanjangan_Hak_Guna_Usaha/controller/Item/action/Detail</string>
+  <string name="url_perpanjangan_hak_guna_bangunan_atau_hak_pakai">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Perpanjangan_Hak_Guna_Bangunan_Atau_Hak_Pakai/controller/Item/action/Detail</string>
+  <string name="url_pembaruan_hak_guna_usaha_perorangan">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pembaruan_Hak_Guna_Usaha_Perorangan/controller/Item/action/Detail</string>
+  <string name="url_pembaruan_hak_guna_usaha_badan_hukum">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pembaruan_Hak_Guna_Usaha_Badan_Hukum/controller/Item/action/Detail</string>
+  <string name="url_pembaruan_hak_guna_bangunan_perorangan">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pembaruan_Hak_Guna_Bangunan_Perorangan/controller/Item/action/Detail</string>
+  <string name="url_pembaruan_hak_guna_bangunan_badan_hukum">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pembaruan_Hak_Guna_Bangunan_Badan_Hukum/controller/Item/action/Detail</string>
+  <string name="url_pembaruan_hak_pakai_perorangan_wni">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pembaruan_Hak_Pakai_Perorangan_WNI/controller/Item/action/Detail</string>
+  <string name="url_pembaruan_hak_pakai_perorangan_wna">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pembaruan_Hak_Pakai_Perorangan_WNA/controller/Item/action/Detail</string>
+  <string name="url_pembaruan_hak_pakai_badan_hukum_indonesia">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pembaruan_Hak_Pakai_Badan_Hukum_Indonesia/controller/Item/action/Detail</string>
+  <string name="url_pembaruan_hak_pakai_badan_hukum_asing">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pembaruan_Hak_Pakai_Badan_Hukum_Asing/controller/Item/action/Detail</string>
+  <string name="url_pembaruan_hak_pakai_instansi_pemerintah">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pembaruan_Hak_Pakai_Instansi_Pemerintah/controller/Item/action/Detail</string>
+  <string name="url_pembaruan_hak_pakai_pemerintah_asing">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pembaruan_Hak_Pakai_Pemerintah_Asing/controller/Item/action/Detail</string>
+  <string name="url_pertimbangan_teknis_pertanahan_dalam_rangka_izin_lokasi">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pertimbangan_Teknis_Pertanahan_Dalam_Rangka_Izin_Lokasi/controller/Item/action/Detail</string>
+  <string name="url_pertimbangan_teknis_pertanahan_dalam_rangka_izin_perubahan_penggunaan_tanah">http://www.atrbpn.go.id/Publikasi/Standar-Prosedur/moduleId/126318/itemName/Pertimbangan_Teknis_Pertanahan_Dalam_Rangka_Izin_Perubahan_Penggunaan_Tanah/controller/Item/action/Detail</string>
+  <!--  end-->
+  <string name="text_note">Berkas yang dibutuhkan harap dipindai menggunakan aplikasi pemindai berbasis OCR dan disimpan dalan format PDF(.pdf).\n\nSeperti:\n- Adobe Scan\n- CamScanner\n- Office Lens</string>
+  <string name="tanya">tanya</string>
+  <string name="lanjut">lanjut</string>
+  <string name="pemecahan">Pemecahan</string>
+  <string name="nama_lengkap">Nama Lengkap</string>
+  <string name="tanggal_lahir">Tanggal Lahir</string>
+  <string name="pekerjaan">Pekerjaan</string>
+  <string name="nomor_nik">Nomor NIK</string>
+  <string name="alamat_lengkap_saat_ini">Alamat Lengkap Saat Ini</string>
+  <string name="tanggal_pengurusan">Tanggal Pengurusan</string>
+  <string name="plus">+</string>
+  <string name="sila_tambahkan_berkas_pdf_pdf">Sila Tambahkan Berkas PDF(.pdf)!</string>
+  <string name="kumpulkan">Kumpulkan</string>
+  <string name="mandiri">Mandiri</string>
+  <string name="atau">atau</string>
+  <string name="mewakilkan">Dengan Kuasa</string>
+  <string name="sila_pilih">Sila Pilih</string>
+  <string name="pilih_tanggal">Pilih Tanggal</string>
+    <string name="nomor_whatsapp_yang_masih_aktif">Nomor WhatsApp yang masih aktif</string>
+    <string name="data_pemohon">Data Pemohon</string>
+    <string name="data_yang_diwakilkan">Data yang diwakilkan</string>
+    <string name="logout">Logout</string>
+    <string-array name="pilihan">
+    <item>Lanjut</item>
+    <item>Mandiri</item>
+    <item>Dengan Kuasa</item>
+  </string-array>
+</resources>

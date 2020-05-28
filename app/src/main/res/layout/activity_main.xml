@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="8dp"
+  tools:context=".main.MainActivity">
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideLine_h15"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.15" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideLine_h30"
+    android:layout_width="wrap_content"
+    android:layout_height="2dp"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.3" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/text_hai"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:autoSizeMaxTextSize="35sp"
+    android:autoSizeStepGranularity="2sp"
+    android:autoSizeTextType="uniform"
+    android:gravity="start"
+    android:paddingStart="8dp"
+    android:text="Hai, DeuBoe"
+    android:textColor="@color/colorAccent"
+    android:textSize="35sp"
+    app:layout_constraintBottom_toTopOf="@+id/guideLine_h15"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="RtlSymmetry"
+    tools:targetApi="o" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:text="Silakan Pilih Layanan"
+    android:textSize="25sp"
+    android:gravity="start|bottom"
+    app:layout_constraintHeight_percent="0.08"
+    app:layout_constraintTop_toBottomOf="@+id/guideLine_h15"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/guideLine_h30"/>
+
+  <ExpandableListView
+    android:id="@+id/expandable_list"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:animateLayoutChanges="true"
+    android:dividerHeight="4dp"
+    android:divider="@android:color/transparent"
+    android:childDivider="@android:color/transparent"
+    android:foregroundGravity="center|left"
+    android:scrollbars="none"
+    android:transitionGroup="true"
+    android:clickable="true"
+    android:focusable="true"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/guideLine_h30" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

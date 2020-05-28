@@ -1,0 +1,2 @@
+rootProject.name='Antrean Online'
+include ':app'

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".SplashActivity">
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideLine_h0"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideLine_h100"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="1" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideLine_v0"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideLine_v100"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="1" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideLine_v10"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.1" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideLine_v90"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.9" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideLine_h15"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.15" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideLine_h30"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.4" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideLine_h45"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.45" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideLine_h75"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.75" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/text_antrean"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:autoSizeMaxTextSize="57sp"
+    android:autoSizeStepGranularity="2sp"
+    android:autoSizeTextType="uniform"
+    android:gravity="center_horizontal|bottom"
+    android:text="@string/app_name"
+    android:textColor="@color/colorPrimaryDark"
+    android:textSize="57sp"
+    android:textStyle="bold"
+    app:layout_constrainedWidth="true"
+    app:layout_constraintBottom_toTopOf="@+id/guideLine_h30"
+    app:layout_constraintEnd_toStartOf="@+id/guideLine_v90"
+    app:layout_constraintHeight_percent="0.1"
+    app:layout_constraintStart_toEndOf="@+id/guideLine_v10"
+    app:layout_constraintTop_toBottomOf="@+id/guideLine_h15"
+    tools:targetApi="o" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/text_kantor"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:autoSizeMaxTextSize="23sp"
+    android:autoSizeStepGranularity="2sp"
+    android:autoSizeTextType="uniform"
+    android:gravity="center_horizontal|top"
+    android:text="@string/kantor_pertanahan_kota_yogyakarta"
+    android:textColor="@color/colorPrimaryDark"
+    android:textSize="23sp"
+    app:layout_constraintEnd_toEndOf="@+id/text_antrean"
+    app:layout_constraintHeight_percent="0.05"
+    app:layout_constraintStart_toStartOf="@+id/text_antrean"
+    app:layout_constraintTop_toBottomOf="@+id/text_antrean"
+    tools:targetApi="o" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/image_logo"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@+id/guideLine_h75"
+    app:layout_constraintDimensionRatio="1:1"
+    app:layout_constraintEnd_toStartOf="@+id/guideLine_v100"
+    app:layout_constraintStart_toEndOf="@+id/guideLine_v0"
+    app:layout_constraintTop_toBottomOf="@+id/guideLine_h45"
+    app:srcCompat="@drawable/logo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

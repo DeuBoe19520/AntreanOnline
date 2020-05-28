@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "1057630775650",
+    "firebase_url": "https://antrean-online-161.firebaseio.com",
+    "project_id": "antrean-online-161",
+    "storage_bucket": "antrean-online-161.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057630775650:android:c333650d31deb9f0aee43b",
+        "android_client_info": {
+          "package_name": "id.deuboe.kantahyogya.adminantreanonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057630775650-3m7mpmdr204qtjj6b5jdrgif1f2t0rt6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.deuboe.kantahyogya.adminantreanonline",
+            "certificate_hash": "c37398f45c2fc47c970a1e28dfec35fb5012c2db"
+          }
+        },
+        {
+          "client_id": "1057630775650-8i913lfqqhoptfvbbt1vafpjiqg88gnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_ifkWrXTLrW3fnzDTaDRCb6jootpcDzs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1057630775650-1nn7sd6kh1tnrs7m6ge3l18mdl1tse4n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057630775650:android:213bfb48bab77350aee43b",
+        "android_client_info": {
+          "package_name": "id.deuboe.kantahyogya.antreanonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057630775650-gpo2uit7lppgel6ug7dqv08t9md2vj1j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.deuboe.kantahyogya.antreanonline",
+            "certificate_hash": "be76e5209d297d9fd85468d986ca3ebb60b5c93f"
+          }
+        },
+        {
+          "client_id": "1057630775650-v25popcputnkqf1c7gcpcava154c2ll1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.deuboe.kantahyogya.antreanonline",
+            "certificate_hash": "c37398f45c2fc47c970a1e28dfec35fb5012c2db"
+          }
+        },
+        {
+          "client_id": "1057630775650-8i913lfqqhoptfvbbt1vafpjiqg88gnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_ifkWrXTLrW3fnzDTaDRCb6jootpcDzs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1057630775650-1nn7sd6kh1tnrs7m6ge3l18mdl1tse4n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

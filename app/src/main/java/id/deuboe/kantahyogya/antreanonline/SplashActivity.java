@@ -20,10 +20,6 @@ public class SplashActivity extends AppCompatActivity {
   private AppCompatImageView imageLogo;
   private static final int SPLASH_SCREEN = 2500;
   private static final String TAG = "SplashActivity";
-  private GoogleSignInClient mGoogleSignInClient;
-  private FirebaseAuth mAuth;
-  private static final int RC_SIGN_IN = 161;
-  private FirebaseUser mUser;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +28,7 @@ public class SplashActivity extends AppCompatActivity {
 
     init();
 
-    checkCurrentUser();
+    splashHandler();
   }
 
   private void init() {
@@ -47,9 +43,6 @@ public class SplashActivity extends AppCompatActivity {
     textAntrean.setAnimation(topAnimation);
     textKantor.setAnimation(topAnimation);
     imageLogo.setAnimation(bottomAnimation);
-
-    mAuth = FirebaseAuth.getInstance();
-    mUser = mAuth.getCurrentUser();
   }
 
   private void splashHandler() {
@@ -57,14 +50,5 @@ public class SplashActivity extends AppCompatActivity {
       startActivity(new Intent(getApplicationContext(), MainActivity.class));
       finish();
     }, SPLASH_SCREEN);
-  }
-
-  private void checkCurrentUser() {
-    if (mUser == null) {
-      startActivity(new Intent(getApplicationContext(), SignInActivity.class));
-      finish();
-    } else {
-      splashHandler();
-    }
   }
 }

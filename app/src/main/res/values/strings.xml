@@ -204,7 +204,10 @@
     <string name="data_pemohon">Data Pemohon</string>
     <string name="data_yang_diwakilkan">Data yang diwakilkan</string>
     <string name="logout">Logout</string>
-    <string-array name="pilihan">
+  <string name="silakan_pilih_layanan">Silakan Pilih Layanan</string>
+  <string name="hai">Hai</string>
+  <string name="sila_login">Sila login</string>
+  <string-array name="pilihan">
     <item>Lanjut</item>
     <item>Mandiri</item>
     <item>Dengan Kuasa</item>

@@ -30,7 +30,7 @@
     android:autoSizeTextType="uniform"
     android:gravity="start"
     android:paddingStart="8dp"
-    android:text="Hai, DeuBoe"
+    android:text="@string/hai"
     android:textColor="@color/colorAccent"
     android:textSize="35sp"
     app:layout_constraintBottom_toTopOf="@+id/guideLine_h15"
@@ -41,33 +41,33 @@
     tools:targetApi="o" />
 
   <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/text_sila_pilih_layanan"
     android:layout_width="0dp"
     android:layout_height="0dp"
-    android:text="Silakan Pilih Layanan"
-    android:textSize="25sp"
     android:gravity="start|bottom"
-    app:layout_constraintHeight_percent="0.08"
-    app:layout_constraintTop_toBottomOf="@+id/guideLine_h15"
-    app:layout_constraintStart_toStartOf="parent"
+    android:text="@string/silakan_pilih_layanan"
+    android:textSize="25sp"
+    app:layout_constraintBottom_toTopOf="@+id/guideLine_h30"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toTopOf="@+id/guideLine_h30"/>
+    app:layout_constraintHeight_percent="0.08"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/guideLine_h15" />
 
   <ExpandableListView
     android:id="@+id/expandable_list"
     android:layout_width="0dp"
     android:layout_height="0dp"
     android:animateLayoutChanges="true"
-    android:dividerHeight="4dp"
-    android:divider="@android:color/transparent"
     android:childDivider="@android:color/transparent"
+    android:clickable="true"
+    android:divider="@android:color/transparent"
+    android:dividerHeight="4dp"
+    android:focusable="true"
     android:foregroundGravity="center|left"
     android:scrollbars="none"
     android:transitionGroup="true"
-    android:clickable="true"
-    android:focusable="true"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/guideLine_h30" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

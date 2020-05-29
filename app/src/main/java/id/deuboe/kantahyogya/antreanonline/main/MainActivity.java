@@ -6,21 +6,32 @@ import android.net.Uri;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ExpandableListView;
-import android.widget.ExpandableListView.OnChildClickListener;
-import android.widget.ExpandableListView.OnGroupExpandListener;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatTextView;
 
 import android.os.Bundle;
 
+import androidx.core.widget.ContentLoadingProgressBar;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignInResult;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import com.google.firebase.auth.GoogleAuthProvider;
 import id.deuboe.kantahyogya.antreanonline.AntreLangsungActivity;
 import id.deuboe.kantahyogya.antreanonline.AntreTidakLangsungActivity;
 import id.deuboe.kantahyogya.antreanonline.R;
@@ -42,18 +53,122 @@ public class MainActivity extends AppCompatActivity {
   private int lastExpandedPosition = -1;
   FirebaseUser mFirebaseUser;
   String selected;
-  private AppCompatTextView textHai;
+  private AppCompatTextView textHai, textSilaPilihLayanan;
+  // SignIn
+  private final String TAG = this.getClass().getName();
+  private GoogleSignInClient mGoogleSignInClient;
+  private FirebaseAuth mFirebaseAuth;
+  private static final int RC_SIGN_IN = 161;
+  private GoogleSignInAccount signInAccount;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    mFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-    textHai = findViewById(R.id.text_hai);
-    textHai.setText(String.format("Hai, %s", mFirebaseUser.getDisplayName()));
+    init();
+    setmExpandableListView();
+    initListData();
+    checkUser();
+    google();
+  }
 
+  private void checkUser() {
+    signInAccount = GoogleSignIn.getLastSignedInAccount(this);
+    if (signInAccount == null) {
+      startActivity(new Intent(getApplicationContext(), SignInActivity.class));
+    } else {
+      textHai.setText(String.format("Hai, %s", signInAccount.getDisplayName()));
+    }
+  }
+
+  private void google() {
+    GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        .requestEmail()
+        .build();
+    mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+  }
+
+  private void init() {
+    textSilaPilihLayanan = findViewById(R.id.text_sila_pilih_layanan);
+    mFirebaseAuth = FirebaseAuth.getInstance();
+    mFirebaseUser = mFirebaseAuth.getCurrentUser();
+    textHai = findViewById(R.id.text_hai);
     mExpandableListView = findViewById(R.id.expandable_list);
+  }
+
+  private void initListData() {
+    addGroupName(R.string.pelayanan_pemeliharaan_data_pendaftaran_tanah);
+    addGroupName(R.string.pelayanan_peralihan_hak);
+    addGroupName(R.string.pelayanan_pendaftaran_tanah_pertama_kali);
+    addGroupName(R.string.pelayanan_informasi_pertanahan);
+    addGroupName(R.string.pelayanan_hak_tanggungan);
+    addGroupName(R.string.pelayanan_sertipikat_pengganti);
+    addGroupName(R.string.pelayanan_hak_milik_satuan_rumah_susun);
+    addGroupName(R.string.pelayanan_perubahan_hak);
+    addGroupName(R.string.pelayanan_pengukuran);
+    addGroupName(R.string.pelayanan_pemberian_hak_atas_tanah);
+    addGroupName(R.string.pelayanan_perpanjangan_hak_atas_tanah);
+    addGroupName(R.string.pelayanan_pembaruan_hak);
+    addGroupName(R.string.pelayanan_pertimbangan_teknis_pertanahan);
+
+    String[] arrayItem0 = arrayItem(R.array.pelayanan_pemeliharaan_data_pendaftaran_tanah);
+    List<String> list0 = makeList(arrayItem0);
+
+    String[] arrayItem1 = arrayItem(R.array.pelayanan_peralihan_hak);
+    List<String> list1 = makeList(arrayItem1);
+
+    String[] arrayItem2 = arrayItem(R.array.pelayanan_pendaftaran_tanah_pertama_kali);
+    List<String> list2 = makeList(arrayItem2);
+
+    String[] arrayItem3 = arrayItem(R.array.pelayanan_informasi_pertanahan);
+    List<String> list3 = makeList(arrayItem3);
+
+    String[] arrayItem4 = arrayItem(R.array.pelayanan_hak_tanggungan);
+    List<String> list4 = makeList(arrayItem4);
+
+    String[] arrayItem5 = arrayItem(R.array.pelayanan_sertipikat_pengganti);
+    List<String> list5 = makeList(arrayItem5);
+
+    String[] arrayItem6 = arrayItem(R.array.pelayanan_hak_milik_satuan_rumah_susun);
+    List<String> list6 = makeList(arrayItem6);
+
+    String[] arrayItem7 = arrayItem(R.array.pelayanan_perubahan_hak);
+    List<String> list7 = makeList(arrayItem7);
+
+    String[] arrayItem8 = arrayItem(R.array.pelayanan_pengukuran);
+    List<String> list8 = makeList(arrayItem8);
+
+    String[] arrayItem9 = arrayItem(R.array.pelayanan_pemberian_hak_atas_tanah);
+    List<String> list9 = makeList(arrayItem9);
+
+    String[] arrayItem10 = arrayItem(R.array.pelayanan_perpanjangan_hak_atas_tanah);
+    List<String> list10 = makeList(arrayItem10);
+
+    String[] arrayItem11 = arrayItem(R.array.pelayanan_pembaruan_hak);
+    List<String> list11 = makeList(arrayItem11);
+
+    String[] arrayItem12 = arrayItem(R.array.pelayanan_pertimbangan_teknis_pertanahan);
+    List<String> list12 = makeList(arrayItem12);
+
+    combineGroupNItem(0, list0);
+    combineGroupNItem(1, list1);
+    combineGroupNItem(2, list2);
+    combineGroupNItem(3, list3);
+    combineGroupNItem(4, list4);
+    combineGroupNItem(5, list5);
+    combineGroupNItem(6, list6);
+    combineGroupNItem(7, list7);
+    combineGroupNItem(8, list8);
+    combineGroupNItem(9, list9);
+    combineGroupNItem(10, list10);
+    combineGroupNItem(11, list11);
+    combineGroupNItem(12, list12);
+
+    adapter.notifyDataSetChanged();
+  }
+
+  private void setmExpandableListView() {
     listGroup = new ArrayList<>();
     listItem = new HashMap<>();
     adapter = new ListAdapter(this, listGroup, listItem);
@@ -344,91 +459,35 @@ public class MainActivity extends AppCompatActivity {
       } else if (equal12_0) {
         intent(R.string.url_pertimbangan_teknis_pertanahan_dalam_rangka_izin_lokasi, s12_0);
       } else if (equal12_1) {
-        intent(R.string.url_pertimbangan_teknis_pertanahan_dalam_rangka_izin_perubahan_penggunaan_tanah, s12_1);
+        intent(
+            R.string.url_pertimbangan_teknis_pertanahan_dalam_rangka_izin_perubahan_penggunaan_tanah,
+            s12_1);
       }
 
       return true;
     });
-    initListData();
   }
 
-  private void initListData() {
-    addGroupName(R.string.pelayanan_pemeliharaan_data_pendaftaran_tanah);
-    addGroupName(R.string.pelayanan_peralihan_hak);
-    addGroupName(R.string.pelayanan_pendaftaran_tanah_pertama_kali);
-    addGroupName(R.string.pelayanan_informasi_pertanahan);
-    addGroupName(R.string.pelayanan_hak_tanggungan);
-    addGroupName(R.string.pelayanan_sertipikat_pengganti);
-    addGroupName(R.string.pelayanan_hak_milik_satuan_rumah_susun);
-    addGroupName(R.string.pelayanan_perubahan_hak);
-    addGroupName(R.string.pelayanan_pengukuran);
-    addGroupName(R.string.pelayanan_pemberian_hak_atas_tanah);
-    addGroupName(R.string.pelayanan_perpanjangan_hak_atas_tanah);
-    addGroupName(R.string.pelayanan_pembaruan_hak);
-    addGroupName(R.string.pelayanan_pertimbangan_teknis_pertanahan);
-
-    String[] arrayItem0 = arrayItem(R.array.pelayanan_pemeliharaan_data_pendaftaran_tanah);
-    List<String> list0 = makeList(arrayItem0);
-
-    String[] arrayItem1 = arrayItem(R.array.pelayanan_peralihan_hak);
-    List<String> list1 = makeList(arrayItem1);
-
-    String[] arrayItem2 = arrayItem(R.array.pelayanan_pendaftaran_tanah_pertama_kali);
-    List<String> list2 = makeList(arrayItem2);
-
-    String[] arrayItem3 = arrayItem(R.array.pelayanan_informasi_pertanahan);
-    List<String> list3 = makeList(arrayItem3);
-
-    String[] arrayItem4 = arrayItem(R.array.pelayanan_hak_tanggungan);
-    List<String> list4 = makeList(arrayItem4);
-
-    String[] arrayItem5 = arrayItem(R.array.pelayanan_sertipikat_pengganti);
-    List<String> list5 = makeList(arrayItem5);
-
-    String[] arrayItem6 = arrayItem(R.array.pelayanan_hak_milik_satuan_rumah_susun);
-    List<String> list6 = makeList(arrayItem6);
-
-    String[] arrayItem7 = arrayItem(R.array.pelayanan_perubahan_hak);
-    List<String> list7 = makeList(arrayItem7);
-
-    String[] arrayItem8 = arrayItem(R.array.pelayanan_pengukuran);
-    List<String> list8 = makeList(arrayItem8);
-
-    String[] arrayItem9 = arrayItem(R.array.pelayanan_pemberian_hak_atas_tanah);
-    List<String> list9 = makeList(arrayItem9);
-
-    String[] arrayItem10 = arrayItem(R.array.pelayanan_perpanjangan_hak_atas_tanah);
-    List<String> list10 = makeList(arrayItem10);
-
-    String[] arrayItem11 = arrayItem(R.array.pelayanan_pembaruan_hak);
-    List<String> list11 = makeList(arrayItem11);
-
-    String[] arrayItem12 = arrayItem(R.array.pelayanan_pertimbangan_teknis_pertanahan);
-    List<String> list12 = makeList(arrayItem12);
-
-    combineGroupNItem(0, list0);
-    combineGroupNItem(1, list1);
-    combineGroupNItem(2, list2);
-    combineGroupNItem(3, list3);
-    combineGroupNItem(4, list4);
-    combineGroupNItem(5, list5);
-    combineGroupNItem(6, list6);
-    combineGroupNItem(7, list7);
-    combineGroupNItem(8, list8);
-    combineGroupNItem(9, list9);
-    combineGroupNItem(10, list10);
-    combineGroupNItem(11, list11);
-    combineGroupNItem(12, list12);
-
-    adapter.notifyDataSetChanged();
+  private void addGroupName(int groupName) {
+    listGroup.add(getString(groupName));
   }
 
-  private void addGroupName(int groupName) { listGroup.add(getString(groupName)); }
-  public String[] arrayItem(int arrayId) { return getResources().getStringArray(arrayId); }
-  private List<String> makeList(String[] arrayItem) { return new ArrayList<>(Arrays.asList(arrayItem)); }
-  private void combineGroupNItem(int i, List<String> list) { listItem.put(listGroup.get(i), list); }
-  private boolean equal(String s) { return Objects.equals(selected, s); }
-  private void toast(String s) { Toast.makeText(this, s, Toast.LENGTH_SHORT).show(); }
+  public String[] arrayItem(int arrayId) {
+    return getResources().getStringArray(arrayId);
+  }
+
+  private List<String> makeList(String[] arrayItem) {
+    return new ArrayList<>(Arrays.asList(arrayItem));
+  }
+
+  private void combineGroupNItem(int i, List<String> list) {
+    listItem.put(listGroup.get(i), list);
+  }
+
+  private boolean equal(String s) {
+    return Objects.equals(selected, s);
+  }
+
   private void intent(int idUrl, String layanan) {
     Intent intentUrl = new Intent(getApplicationContext(), SelectedActivity.class);
     intentUrl.putExtra("url", setUrl(idUrl));
@@ -436,11 +495,6 @@ public class MainActivity extends AppCompatActivity {
     startActivity(intentUrl);
   }
 
-  private void intentLayanan(String layanan) {
-    Intent intent = new Intent();
-    intent.putExtra("layanan", layanan);
-    startActivity(intent);
-  }
   private String setUrl(int idUrl) {
     return getString(idUrl);
   }
@@ -457,9 +511,11 @@ public class MainActivity extends AppCompatActivity {
   public boolean onOptionsItemSelected(@NonNull MenuItem item) {
     switch (item.getItemId()) {
       case R.id.item_logout:
-        FirebaseAuth.getInstance().signOut();
-        finish();
-        startActivity(new Intent(getApplicationContext(), SignInActivity.class));
+        mGoogleSignInClient.signOut().addOnCompleteListener(task -> {
+          startActivity(new Intent(getApplicationContext(), SignInActivity.class));
+          Toast.makeText(this, "Sampai Jumpa\n\t" + signInAccount.getDisplayName(),
+              Toast.LENGTH_SHORT).show();
+        });
         break;
       case R.id.item_tanya:
         String s = "https://wa.me/6285156901191";

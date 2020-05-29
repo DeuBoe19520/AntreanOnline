@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1057630775650-0d8vc29khungc9c3oc95sq44pjc13bpq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.deuboe.kantahyogya.adminantreanonline",
+            "certificate_hash": "be76e5209d297d9fd85468d986ca3ebb60b5c93f"
+          }
+        },
+        {
           "client_id": "1057630775650-3m7mpmdr204qtjj6b5jdrgif1f2t0rt6.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

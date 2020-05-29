@@ -85,12 +85,7 @@ public class SignInActivity extends AppCompatActivity implements OnClickListener
     textKantor.setAnimation(topAnimation);
     imageLogo.setAnimation(bottomAnimation);
 
-    new Handler().postDelayed(new Runnable() {
-      @Override
-      public void run() {
-        buttonSignIn.setVisibility(View.VISIBLE);
-      }
-    }, SPLASH_SCREEN);
+    new Handler().postDelayed(() -> buttonSignIn.setVisibility(View.VISIBLE), SPLASH_SCREEN);
   }
 
   private void setSignIn() {
@@ -138,23 +133,22 @@ public class SignInActivity extends AppCompatActivity implements OnClickListener
 
     AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
     mAuth.signInWithCredential(credential)
-        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-          @Override
-          public void onComplete(@NonNull Task<AuthResult> task) {
-            if (task.isSuccessful()) {
-              Log.d(TAG, "SignIn Success");
-              startActivity(new Intent(getApplicationContext(), MainActivity.class));
-              finish();
-              Toast.makeText(SignInActivity.this, getString(R.string.selamat_datang)
-                  + "\n\t" + Objects.requireNonNull(mUser).getDisplayName(), Toast.LENGTH_SHORT)
-                  .show();
-            }
+        .addOnCompleteListener(this, task -> {
+          if (task.isSuccessful()) {
+            Log.d(TAG, "SignIn Success");
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            finish();
+            Toast.makeText(SignInActivity.this, getString(R.string.selamat_datang)
+                + "\n\t" + account.getDisplayName(), Toast.LENGTH_SHORT)
+                .show();
           }
         })
         .addOnFailureListener(this, e -> {
           Log.w(TAG, "SignIn Failure" + Arrays.toString(e.getStackTrace()));
           Toast.makeText(SignInActivity.this, "Gagal Login\n\t" + e.getMessage(),
               Toast.LENGTH_SHORT).show();
+          buttonSignIn.setVisibility(View.VISIBLE);
+          progressCircular.setVisibility(View.GONE);
         });
   }
 
